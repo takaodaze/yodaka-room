@@ -1,19 +1,29 @@
 import { createBrowserRouter } from "react-router-dom";
-import { RootPage } from "./component/page/RootPage";
-import { HomePage } from "./HomePage";
 
-export const paths = {
-    root: "/",
-} as const;
+import { RootPage } from "./component/page/RootPage";
+import { CommonLayout } from "./component/page/CommonLayout";
+import { paths } from "./constant/paths";
 
 export const router = createBrowserRouter([
     {
         path: paths.root,
-        element: <RootPage />,
+        element: <CommonLayout />,
         children: [
             {
                 path: paths.root,
-                element: <HomePage />,
+                element: <RootPage />,
+            },
+            {
+                path: paths.works,
+                element: <>まだ何もありません;</>,
+            },
+            {
+                path: paths.characters,
+                element: <>まだ何もありません;</>,
+            },
+            {
+                path: paths.profile,
+                element: <>まだ何もありません;</>,
             },
         ],
     },
