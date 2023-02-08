@@ -20,7 +20,14 @@ export const router = createBrowserRouter([
             },
             {
                 path: paths.characters,
-                element: <>まだ何もありません;</>,
+                element: (
+                    <>
+                        まだ何もありません;
+                        <p>
+                            ハロープラネット的な世界で誰かと手紙やりとりできるゲーム？つくりたい
+                        </p>
+                    </>
+                ),
             },
             {
                 path: paths.profile,
