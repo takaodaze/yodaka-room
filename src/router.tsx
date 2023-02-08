@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { RootPage } from "./component/page/RootPage";
 import { CommonLayout } from "./component/page/CommonLayout";
 import { paths } from "./constant/paths";
+import { ProfilePage } from "./component/page/ProfilePage";
 
 export const router = createBrowserRouter([
     {
@@ -23,7 +24,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: paths.profile,
-                element: <>まだ何もありません;</>,
+                element: <ProfilePage />,
             },
         ],
     },
